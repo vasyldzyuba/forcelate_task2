@@ -1,0 +1,94 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html body {
+	background-color: #CAE7F1;
+	overflow-x: hidden;
+}
+
+img {
+	width: 27px;
+	height: 27px;
+}
+
+.post {
+	color: #323232;
+	font-size: 23px;
+}
+
+.hover {
+	margin-bottom: 5px;
+}
+
+.hover:hover {
+	cursor: pointer;
+}
+
+.btnText {
+	font-size: 18px;
+	margin-left: 5px;
+	margin-right: 8px;
+	font-family: sans-serif;
+}
+
+.buttonsCont {
+	margin-top: 10px;
+}
+
+#addModal {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	overflow-y: auto;
+	height: 100vh;
+}
+
+.firstTable {
+	margin-top: 15px;
+}
+
+.secondTable {
+	margin-top: 40px;
+}
+
+.tableCont {
+	overflow: auto;
+}
+
+
+#table1,
+#table2 {
+	margin-bottom: 0rem;
+}
+
+tr {
+	text-align: left;
+	font-size: 14px;
+}
+
+td {
+	background-color: white;
+	font-size: 14px;
+}
+
+.secondTableHead {
+	margin-bottom: 5px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.form-group {
+	padding-top: 10px;
+	font-weight: bolder;
+}
+
+@media screen and (max-width: 575px) {
+	.form-group {
+		text-align: center;
+	}
+}

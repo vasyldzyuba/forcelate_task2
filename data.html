@@ -1,0 +1,189 @@
+<!--------	MODAL WINDOW START------------------------------->
+<div class="modal fade bd-example-modal-lg-3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" id="addModal">
+	<div class="modal-dialog modal-lg-3" role="document">
+		<div class="modal-content">
+			<div class="modal-body ">
+				<div class="form-group">
+					<label>Call Control</label>
+					<input type="text" ng-model='data.callControll' class="form-control" style="width:100%;" placeholder="Call control">
+				</div>
+				<div class="form-group">
+					<label>Read</label>
+					<input type="text" class="form-control" placeholder="Read" ng-model='data.read'>
+				</div>
+				<div class="form-group">
+					<label>Sound/Auto Call</label>
+					<input type="text" class="form-control" placeholder="Sound" ng-model='data.soundAutoCall'>
+				</div>
+				<div class="form-group">
+					<label>Truck</label>
+					<input type="text" class="form-control" placeholder="Truck" ng-model='data.truck'>
+				</div>
+				<div class="form-group">
+					<label>Origin</label>
+					<input type="text" class="form-control" placeholder="Origin" ng-model='data.origin'>
+				</div>
+				<div class="form-group">
+					<label>Destination</label>
+					<input type="text" class="form-control" placeholder="Destination" ng-model='data.destination'>
+				</div>
+				<div class="form-group">
+					<label>Pickup</label>
+					<input type="text" class="form-control" placeholder="Pickup" ng-model='data.pickup'>
+				</div>
+				<div class="form-group">
+					<label>DH-O</label>
+					<input type="text" class="form-control" placeholder="DH-O" ng-model='data.dho'>
+				</div>
+				<div class="form-group">
+					<label>DH-D</label>
+					<input type="text" class="form-control" placeholder="DH-D" ng-model='data.dhd'>
+				</div>
+				<div class="form-group">
+					<label>F/P</label>
+					<input type="text" class="form-control" placeholder="F/P" ng-model='data.fp'>
+				</div>
+				<div class="form-group">
+					<label>Length</label>
+					<input type="text" class="form-control" placeholder="Length" ng-model='data.length'>
+				</div>
+				<div class="form-group">
+					<label>Weigth</label>
+					<input type="text" class="form-control" placeholder="Weigth" ng-model='data.weigth'>
+				</div>
+				<div class="form-group">
+					<label>Trip</label>
+					<input type="text" class="form-control" placeholder="Trip" ng-model='data.trip'>
+				</div>
+				<div class="form-group">
+					<label>Alarm</label>
+					<input type="text" class="form-control" placeholder="Alarm" ng-model='data.alarm'>
+				</div>
+				<div class="form-group">
+					<label>Actions</label>
+					<input type="text" class="form-control" value="actions" name="blabla" placeholder="Actions" ng-model='data.actions'>
+				</div>
+				<input type="button" value="Push" class="btn btn-success  btn-block" ng-click='data.pushData()' id="btnPush">
+			</div>
+		</div>
+	</div>
+</div>
+<!--------	MODAL WINDOW END------------------------------->
+
+
+
+<!--------	MAIN CONTENT  START------------------------------->
+<div class="container-fluid">
+	<span class="post">Post Trucks</span><br>
+	<div class="buttonsCont">
+		<img src="img/Start_button_green_arrow.svg.png" alt="" ng-click='data.playRandom()' class="hover">
+		<img src="img/711179-200.png" alt="" class="hover">
+		<img src="img/plus-31216_1280.png" alt="" data-toggle="modal" data-target="#addModal" class="hover"><span data-toggle="modal" data-target="#addModal" class="btnText hover">New</span>
+		<img src="img/x-png-33.png" alt="" ng-click='data.clearAll()' class="hover"><span class="btnText hover" ng-click='data.clearAll()'>Delete All</span>
+	</div>
+	<!--------	FIRST TABLE START------------------------------->
+	<div class="tableCont firstTable">
+		<table class="table table-bordered table-hover" id="table1">
+			<thead>
+				<tr class="text-center">
+					<th scope="col" class="text-white bg-dark">Call Control</th>
+					<th scope="col" class="text-white bg-dark">Read</th>
+					<th scope="col" class="text-white bg-dark">Sound/Auto Call</th>
+					<th scope="col" class="text-white bg-dark">Truck</th>
+					<th scope="col" class="text-white bg-dark">Origin</th>
+					<th scope="col" class="text-white bg-dark">Destination</th>
+					<th scope="col" class="text-white bg-dark">Pickup</th>
+					<th scope="col" class="text-white bg-dark">DH-O</th>
+					<th scope="col" class="text-white bg-dark">DH-D</th>
+					<th scope="col" class="text-white bg-dark">F/P</th>
+					<th scope="col" class="text-white bg-dark">Length</th>
+					<th scope="col" class="text-white bg-dark">Weight</th>
+					<th scope="col" class="text-white bg-dark">Trip</th>
+					<th scope="col" class="text-white bg-dark">Alarm</th>
+					<th scope="col" class="text-white bg-dark">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat='new in data.dataArray' class="text-center">
+					<td>{{new.callControll}}</td>
+					<td>{{new.read}}</td>
+					<td>{{new.soundAutoCall}}</td>
+					<td>{{new.truck}}</td>
+					<td>{{new.origin}}</td>
+					<td>{{new.destination}}</td>
+					<td>{{new.pickup}}</td>
+					<td>{{new.dho}}</td>
+					<td>{{new.dhd}}</td>
+					<td>{{new.fp}}</td>
+					<td>{{new.length}}</td>
+					<td>{{new.weigth}}</td>
+					<td>{{new.trip}}</td>
+					<td>{{new.alarm}}</td>
+					<td>{{new.actions}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--------	FIRST TABLE END------------------------------->
+
+
+
+	<!--------	SECOND TABLE START------------------------------->
+	<div class="tableCont secondTable">
+		<div class="secondTableHead">
+			<span class="post">Search results: Total: <span ng-bind='data.count'></span></span>
+			<div>
+				<img src="img/Forbidden_Symbol_Transparent.svg.png" class="hover" alt="" ng-click='data.clearSecondTable()'>
+				<span class="post hover" ng-click='data.clearSecondTable()'>Clear</span>
+			</div>
+		</div>
+		<table class="table table-bordered" id="table2">
+			<thead>
+				<tr class="text-center table-hover">
+					<th class="text-white bg-dark">Rate</th>
+					<th class="text-white bg-dark">F</th>
+					<th class="text-white bg-dark">Source</th>
+					<th class="text-white bg-dark">Age</th>
+					<th class="text-white bg-dark">Avail</th>
+					<th class="text-white bg-dark">Truck</th>
+					<th class="text-white bg-dark">Truck-O</th>
+					<th class="text-white bg-dark">DH-O</th>
+					<th class="text-white bg-dark">F/P</th>
+					<th class="text-white bg-dark">Origin</th>
+					<th class="text-white bg-dark">Trip</th>
+					<th class="text-white bg-dark">Destination</th>
+					<th class="text-white bg-dark">DH-D</th>
+					<th class="text-white bg-dark">Truck-D</th>
+					<th class="text-white bg-dark">Length</th>
+					<th class="text-white bg-dark">Weight</th>
+					<th class="text-white bg-dark">Company</th>
+					<th class="text-white bg-dark">Phone</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat='new in data.results' class="text-center">
+					<td>{{new.rate}}</td>
+					<td>{{new.f}}</td>
+					<td>{{new.source}}</td>
+					<td>{{new.age}}</td>
+					<td>{{new.avail}}</td>
+					<td>{{new.truck}}</td>
+					<td>{{new.truck_o}}</td>
+					<td>{{new.dh_o}}</td>
+					<td>{{new.f_p}}</td>
+					<td>{{new.origin}}</td>
+					<td>{{new.trip}}</td>
+					<td>{{new.destination}}</td>
+					<td>{{new.dh_d}}</td>
+					<td>{{new.truck_d}}</td>
+					<td>{{new.length}}</td>
+					<td>{{new.weigth}}</td>
+					<td>{{new.company}}</td>
+					<td>{{new.phone}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<!--------	SECOND TABLE END------------------------------->
+</div>
+<!--------	MAIN CONTENT  END------------------------------->
