@@ -3,10 +3,7 @@ app.controller('dataCtrl', function ($timeout) {
 
 	//First table array
 	vm.dataArray = [];
-
-	//Second table array
-	vm.results = [];
-
+	
 	//Working with text inputs for first table 
 	vm.callControll = null;
 	vm.read = null;
